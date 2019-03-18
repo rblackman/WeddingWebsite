@@ -1,0 +1,23 @@
+{
+  "name": "react-jekyll-template",
+  "version": "1.0.0",
+  "description": "My jekyll template for creating a quick react app",
+  "main": "index.js",
+  "repository": "git@github.com:rblackman/ReactJekyllTemplate.git",
+  "author": "Ryan Blackman <rblackman24@gmail.com>",
+  "license": "Apache Version 2.0",
+  "private": true,
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "source-map-loader": "^0.2.4",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3333",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-command": "^0.4.2"
+  }
+}

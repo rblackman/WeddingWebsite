@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Development Build",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/.bin/webpack",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"args": ["--progress", "-d"]
+		},
+		{
+			"label": "Production Build",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/.bin/webpack",
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"args": ["--progress", "-p"]
+		}
+	]
+}
