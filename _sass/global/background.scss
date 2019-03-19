@@ -1,0 +1,39 @@
+main {
+	background-color: #81868c;
+	background: url('/image/hero-1x.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+
+	* {
+		z-index: 1002;
+	}
+
+	&:before {
+		display: block;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to top, var(--dark-gold), var(--light-gold));
+		background-blend-mode: multiply;
+		opacity: 0.3;
+		content: ' ';
+	}
+
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 801px) and (min-resolution: 1.5dppx) {
+		background-image: url('/image/hero-2x.jpg');
+	}
+
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min-width: 801px) and (min-resolution: 3dppx) {
+		background-image: url('/image/hero-3x.jpg');
+	}
+
+	@media only screen and (max-width: 800px) {
+		background-image: url('/image/hero-mobile.jpg');
+	}
+}
