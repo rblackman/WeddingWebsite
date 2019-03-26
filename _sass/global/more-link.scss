@@ -1,0 +1,25 @@
+$width: 60px;
+$chevron-width: 40px;
+
+.more-link {
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  background: rgba(255,255,255, 0.6);
+  color: rgba(52,52,52,0.8);
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  transition: background .2s ease-in-out;
+
+  &:hover {
+    background: #fff;
+  }
+
+  .chevron {
+    width: $chevron-width;
+    position: absolute;
+    left: ($width - $chevron-width) / 2;
+    top: (($width - $chevron-width) / 2) * 1.2;
+  }
+}
