@@ -1,5 +1,13 @@
 @import './include';
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 html {
+	box-sizing: border-box;
 	color: $theme-black;
 	background: $theme-white;
 }

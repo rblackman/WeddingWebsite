@@ -14,20 +14,22 @@
 }
 
 header {
-	padding: 1.25rem 4rem;
+	height: $header-total-height;
+	padding: $top-pad $side-pad;
 	nav {
 		display: grid;
 		grid-template-columns: min-content 1fr;
 		align-items: center;
-		ul {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-end;
-			margin: 0;
-			padding: 0;
-			> li {
-				list-style: none;
-			}
+	}
+
+	ul {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		margin: 0;
+		padding: 0;
+		> li {
+			list-style: none;
 		}
 	}
 

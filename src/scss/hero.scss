@@ -1,0 +1,20 @@
+@import './include';
+.hero {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	@include light-font();
+	color: $theme-white;
+	letter-spacing: 0.75rem;
+	font-size: 6.25rem;
+	background-position: center center;
+	background-size: cover;
+
+	&.full {
+		height: calc(100vh - #{$header-total-height});
+	}
+
+	&.home {
+		background-image: url('https://placekitten.com/1920/1080');
+	}
+}
