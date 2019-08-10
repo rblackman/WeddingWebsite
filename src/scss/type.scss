@@ -1,0 +1,16 @@
+@import './include';
+
+h3 {
+	@include font-normal;
+	margin: 0 0 2rem 0;
+	font-size: 2.25rem;
+}
+
+p {
+	@include font-body;
+	font-size: 1.125rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.75;
+	margin: 1rem 0;
+	max-width: 65ch;
+}

@@ -1,12 +1,7 @@
-import * as React from 'react';
-import { FC } from 'react';
-import Hero from '../shared/hero';
+import React, { FC } from 'react';
+import Page from '../shared/page';
 
-const Home: FC = () => (
-	<div>
-		<Hero imageClass="home" type="full">
-			<p>#r2b2wedding</p>
-		</Hero>
-	</div>
-);
+const Home: FC = () =>
+	<Page pageName="home" heroType="full" heroText="#r2b2wedding" />;
+
 export default Home;

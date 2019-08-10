@@ -1,5 +1,5 @@
 @import './include';
-
+@import './type';
 *,
 *::before,
 *::after {
@@ -10,6 +10,7 @@ html {
 	box-sizing: border-box;
 	color: $theme-black;
 	background: $theme-white;
+	@include font-normal;
 }
 
 html,

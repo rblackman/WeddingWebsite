@@ -1,15 +1,20 @@
 %brandon-grotesque {
 	font-family: brandon-grotesque, sans-serif;
 	font-style: normal;
-	text-transform: uppercase;
 }
 
-@mixin regular-font {
+@mixin font-normal {
 	@extend %brandon-grotesque;
 	font-weight: 400;
 }
 
-@mixin light-font {
+@mixin font-light {
 	@extend %brandon-grotesque;
 	font-weight: 300;
+}
+
+@mixin font-body {
+	font-family: ambroise-std, serif;
+	font-weight: 400;
+	font-style: normal;
 }

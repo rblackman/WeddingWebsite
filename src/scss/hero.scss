@@ -1,20 +1,56 @@
 @import './include';
+
+@mixin bg-image($name) {
+	background-image: url('../image/#{$name}-1x.jpg');
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 801px) and (min-resolution: 1.5dppx) {
+		background-image: url('../image/#{$name}-2x.jpg');
+	}
+
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min-width: 801px) and (min-resolution: 3dppx) {
+		background-image: url('../image/#{$name}-3x.jpg');
+	}
+
+	@media only screen and (max-width: 800px) {
+		// mobile link
+	}
+}
+
 .hero {
 	display: grid;
 	align-content: center;
 	justify-content: center;
-	@include light-font();
-	color: $theme-white;
-	letter-spacing: 0.75rem;
-	font-size: 6.25rem;
 	background-position: center center;
 	background-size: cover;
+	h2 {
+		@include font-light();
+		text-transform: uppercase;
+		color: $theme-white;
+		letter-spacing: 0.75rem;
+		font-size: 6.25rem;
+		text-shadow: 0 0 5rem rgba($theme-black, 0.8);
+	}
 
 	&.full {
 		height: calc(100vh - #{$header-total-height});
 	}
 
+	&.partial {
+		height: calc(50vh - #{$header-total-height});
+	}
+
 	&.home {
+		@include bg-image(home);
+	}
+
+	&.registry {
 		background-image: url('https://placekitten.com/1920/1080');
+	}
+
+	&.itinerary {
+		background-image: url('https://placekitten.com/1920/1080');
+	}
+
+	&.lodging {
+		@include bg-image(lodging);
 	}
 }
