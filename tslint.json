@@ -25,6 +25,13 @@
 			true,
 			"tabs",
 			1
+		],
+		"trailing-comma": [
+			true,
+			{
+				"multiline": "never",
+				"singleline": "never"
+			}
 		]
 	}
 }
