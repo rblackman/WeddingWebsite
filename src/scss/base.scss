@@ -1,0 +1,12 @@
+@import './include';
+html {
+	color: $theme-black;
+	background: $theme-white;
+}
+
+html,
+body,
+main {
+	margin: 0;
+	padding: 0;
+}

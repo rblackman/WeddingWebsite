@@ -1,0 +1,55 @@
+@import './include';
+
+%nav-link {
+	text-decoration: none;
+	@include regular-font;
+	display: block;
+
+	&,
+	&:hover,
+	&:visited,
+	&:active {
+		color: $theme-black;
+	}
+}
+
+header {
+	padding: 1.25rem 4rem;
+	nav {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		align-items: center;
+		ul {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-end;
+			margin: 0;
+			padding: 0;
+			> li {
+				list-style: none;
+			}
+		}
+	}
+
+	.home-link {
+		@extend %nav-link;
+		letter-spacing: 0.26rem;
+		font-size: 1.0625rem;
+	}
+
+	.nav-item {
+		@extend %nav-link;
+		letter-spacing: 0.135rem;
+		padding: 0.5rem 0 0 0;
+		margin: 0 1rem 0.5rem 1rem;
+		font-size: 0.75rem;
+		border-bottom: 0.0625rem solid rgba(0, 5, 0, 0);
+		transition: border-bottom-color 0.2s ease-in-out;
+		&.active {
+			border-bottom-color: $theme-black;
+		}
+		&:hover {
+			text-shadow: 0 0 10px rgba($theme-black, 0.05);
+		}
+	}
+}

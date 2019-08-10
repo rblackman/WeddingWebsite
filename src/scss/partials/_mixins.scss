@@ -1,0 +1,15 @@
+%brandon-grotesque {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+@mixin regular-font {
+	@extend %brandon-grotesque;
+	font-weight: 400;
+}
+
+@mixin light-font {
+	@extend %brandon-grotesque;
+	font-weight: 300;
+}
