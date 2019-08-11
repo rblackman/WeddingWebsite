@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react';
 import '../../../scss/main-container.scss';
 import Hero, { HeroProps } from './hero';
 
-export type Pages = 'home' | 'itinerary' | 'lodging' | 'registry';
+export type Pages = 'home' | 'itinerary' | 'lodging' | 'registry' | 'party';
 
 interface Props extends HeroProps {
 	heroText: string;

@@ -53,4 +53,8 @@
 	&.lodging {
 		@include bg-image(lodging);
 	}
+
+	&.party {
+		background-image: url('https://placekitten.com/1920/1080');
+	}
 }

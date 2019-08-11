@@ -49,7 +49,7 @@ module.exports = {
 				options: {
 					limit: 10000,
 				},
-			},
+			}, f
 		],
 	},
 	resolve: {

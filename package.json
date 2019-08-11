@@ -45,6 +45,6 @@
 		"react-router-dom": "^5.0.1"
 	},
 	"scripts": {
-		"start:dev": "webpack-dev-server --mode development --hot"
+		"start:dev": "webpack-dev-server --mode development --hot --color"
 	}
 }

@@ -14,3 +14,21 @@ p {
 	margin: 1rem 0;
 	max-width: 65ch;
 }
+
+a {
+	&,
+	&:active,
+	&:visited {
+		color: darken($theme-light-green, 45%);
+	}
+	&:hover {
+		color: darken($theme-light-green, 38%);
+	}
+	&[href^='tel:'] {
+		text-decoration: none;
+		color: $theme-black;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
