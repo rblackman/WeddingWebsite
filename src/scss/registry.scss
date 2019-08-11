@@ -25,7 +25,8 @@
 
 	.logo {
 		max-height: 4rem;
-		fill: $theme-light-green;
+		fill: lighten($theme-dark-green, 3%);
+		opacity: 0.5;
 		justify-self: center;
 	}
 }
