@@ -3,6 +3,11 @@
 	font-style: normal;
 }
 
+@mixin font-bold {
+	@extend %brandon-grotesque;
+	font-weight: 700;
+}
+
 @mixin font-normal {
 	@extend %brandon-grotesque;
 	font-weight: 400;
@@ -17,4 +22,24 @@
 	font-family: ambroise-std, serif;
 	font-weight: 400;
 	font-style: normal;
+}
+
+@mixin button($font-size, $padding-side, $padding-top, $border: 0.125rem) {
+	$color: lighten($theme-dark-green, 15%);
+	color: $color;
+	border: $border solid $color;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: $border * 2;
+	padding: $padding-top $padding-side;
+	margin: 0 auto;
+	font-size: $font-size;
+	min-width: $font-size * 5;
+	@include font-normal;
+	text-transform: uppercase;
+	transition: background 0.2s ease-in-out;
+	text-align: center;
+	&:hover {
+		background: rgba($color, 0.08);
+	}
 }

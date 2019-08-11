@@ -20,22 +20,7 @@
 		margin: 0;
 	}
 	a.visit {
-		$color: lighten($theme-dark-green, 15%);
-		color: $color;
-		border: 0.125rem solid $color;
-		display: inline-block;
-		text-decoration: none;
-		border-radius: 0.25rem;
-		padding: 0.25rem 0.5rem;
-		margin: 0 auto;
-		font-size: 1.5rem;
-		min-width: 8rem;
-		@include font-normal;
-		text-transform: uppercase;
-		transition: background 0.2s ease-in-out;
-		&:hover {
-			background: rgba($color, 0.08);
-		}
+		@include button(1.5rem, f0.5rem, 0.25rem);
 	}
 
 	.logo {

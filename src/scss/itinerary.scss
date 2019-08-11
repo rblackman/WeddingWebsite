@@ -1,0 +1,8 @@
+@import './include';
+@import './dl';
+
+.map-button {
+	@include button(1rem, 0.5rem, 0.125rem);
+	display: inline-block;
+	margin: 1rem 0 2rem;
+}
