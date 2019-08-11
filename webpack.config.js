@@ -14,6 +14,8 @@ const DefinePluginConfig = new webpack.DefinePlugin({
 	'process.env.NODE_ENV': JSON.stringify('production'),
 });
 
+const indexPath = path.join(__dirname, '/src/ts/index.tsx');
+
 module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'docs'),
@@ -25,7 +27,7 @@ module.exports = {
 		},
 		historyApiFallback: true,
 	},
-	entry: ['react-hot-loader/patch', path.join(__dirname, '/src/ts/index.tsx')],
+	entry: dev ? ['react-hot-loader/patch', indexPath] : [indexPath],
 	module: {
 		rules: [
 			{

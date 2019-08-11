@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import '../../scss/base.scss';
-import Home from './home/home';
-import Itinerary from './itinerary/itinerary';
-import Lodging from './lodging/lodging';
-import Registry from './registry/registry';
+import Home from './pages/home';
+import Itinerary from './pages/itinerary';
+import Lodging from './pages/lodging';
+import Registry from './pages/registry';
 import Header from './shared/header';
 
 const App: FC = () => (
