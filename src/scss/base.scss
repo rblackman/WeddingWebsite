@@ -4,6 +4,7 @@
 *::before,
 *::after {
 	box-sizing: inherit;
+	outline-color: inherit;
 }
 
 html {
@@ -11,6 +12,7 @@ html {
 	color: $theme-black;
 	background: $theme-white;
 	@include font-normal;
+	outline-color: $theme-gold;
 }
 
 html,

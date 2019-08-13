@@ -43,3 +43,27 @@
 		background: rgba($color, 0.08);
 	}
 }
+
+@mixin no-html-button($color: $theme-black, $bg: $theme-white) {
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: $color;
+	background: $bg;
+	border: 0.0625rem solid transparent;
+	transition: all 0.2s ease-in-out;
+	padding: 0.25rem;
+	display: inline-block;
+	border-radius: 0.125rem;
+	svg {
+		fill: $color;
+	}
+	&:hover,
+	&:active {
+		border-color: rgba($color, 0.5);
+	}
+	&:focus {
+		border-color: rgba($theme-gold, 0.5);
+	}
+}

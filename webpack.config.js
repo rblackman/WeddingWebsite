@@ -5,7 +5,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const dev = process.env.NODE_ENV !== 'production';
 
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: 'index.html',
+	template: 'src/html/index.html',
 	filename: 'index.html',
 	inject: true,
 });
