@@ -8,6 +8,12 @@
 	justify-items: center;
 	align-items: center;
 	margin-top: $container-top-pad / 2;
+
+	@media only screen and (max-width: 45rem) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 6rem;
+	}
 }
 
 .registry-display {

@@ -114,6 +114,10 @@ header {
 			border-color: transparent;
 			background: rgba($theme-black, 0.025);
 		}
+
+		&.active {
+			border-bottom-color: transparent !important;
+		}
 	}
 
 	&.menu-open {
