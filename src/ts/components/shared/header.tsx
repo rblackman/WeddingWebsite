@@ -13,6 +13,8 @@ const Header: FC = () => {
 
 	const menuClick: () => void = () => updateOpen(!isOpen);
 
+	const closeMenu: () => void = () => updateOpen(false);
+
 	useEffect(() => {
 		if (isMobile()) {
 			updateShowMenu(true);
@@ -22,6 +24,7 @@ const Header: FC = () => {
 			const newShowMenu = isMobile();
 			if (newShowMenu !== showMenu) {
 				updateShowMenu(newShowMenu);
+				updateOpen(false);
 			}
 		}, 200);
 
@@ -32,7 +35,6 @@ const Header: FC = () => {
 		return () => {
 			window.removeEventListener('resize', debouncedResize);
 		};
-
 	});
 
 	const navClasses: string[] = [
@@ -48,10 +50,26 @@ const Header: FC = () => {
 					<Link to="/" className="home-link" title="Home">#r2b2wedding</Link>
 				</h1>
 				<ul className="nav-items">
-					<li><NavLink to="/itinerary" className="nav-item" activeClassName="nav-item active">Itinerary</NavLink></li>
-					<li><NavLink to="/lodging" className="nav-item" activeClassName="nav-item active">Lodging</NavLink></li>
-					<li><NavLink to="/party" className="nav-item" activeClassName="nav-item active">Wedding Party</NavLink></li>
-					<li><NavLink to="/registry" className="nav-item" activeClassName="nav-item active">Registry</NavLink></li>
+					<li>
+						<NavLink to="/itinerary" className="nav-item" activeClassName="nav-item active" onClick={closeMenu}>
+							Itinerary
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to="/lodging" className="nav-item" activeClassName="nav-item active" onClick={closeMenu}>
+							Lodging
+							</NavLink>
+					</li>
+					<li>
+						<NavLink to="/party" className="nav-item" activeClassName="nav-item active" onClick={closeMenu}>
+							Wedding Party
+							</NavLink>
+					</li>
+					<li>
+						<NavLink to="/registry" className="nav-item" activeClassName="nav-item active" onClick={closeMenu}>
+							Registry
+							</NavLink>
+					</li>
 				</ul>
 				<button className="menu-button" onClick={menuClick}>
 					<svg className="menu">
