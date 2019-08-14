@@ -8,9 +8,9 @@ const Party: FC = () => (
 		pageName="party"
 		heroType="partial"
 		heroText="Wedding Party"
-		textX={85}
+		textX={28}
 		textY={65}
-		viewBoxX={500}
+		viewBoxX={400}
 		viewBoxY={100}
 	>
 		<div className="party-grid">

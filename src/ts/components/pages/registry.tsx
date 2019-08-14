@@ -11,9 +11,9 @@ const Registry: FC = () => (
 		pageName="registry"
 		heroType="partial"
 		heroText="Registry"
-		textX={150}
+		textX={98}
 		textY={65}
-		viewBoxX={500}
+		viewBoxX={400}
 		viewBoxY={100}
 	>
 		<p>

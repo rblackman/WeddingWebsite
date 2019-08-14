@@ -7,9 +7,9 @@ const Itinerary: FC = () => (
 		pageName="itinerary"
 		heroType="partial"
 		heroText="Itinerary"
-		textX={140}
+		textX={90}
 		textY={65}
-		viewBoxX={500}
+		viewBoxX={400}
 		viewBoxY={100}
 	>
 		<h3>Saturday, November 23, 2019</h3>

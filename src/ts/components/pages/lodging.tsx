@@ -7,9 +7,9 @@ const Lodging: FC = () => (
 		heroType="partial"
 		heroText="Lodging"
 		heroImageVerticalAlign="top"
-		textX={160}
+		textX={95}
 		textY={65}
-		viewBoxX={500}
+		viewBoxX={400}
 		viewBoxY={100}
 	>
 		<h3>Allerton</h3>

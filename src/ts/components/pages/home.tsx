@@ -6,9 +6,9 @@ const Home: FC = () => (
 		pageName="home"
 		heroType="full"
 		heroText="#r2b2wedding"
-		textX={90}
+		textX={36}
 		textY={65}
-		viewBoxX={500}
+		viewBoxX={400}
 		viewBoxY={100}
 	/>
 );
