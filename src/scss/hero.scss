@@ -22,12 +22,16 @@
 	background-position: center center;
 	background-size: cover;
 	h2 {
-		@include font-light();
-		text-transform: uppercase;
-		color: $theme-white;
-		letter-spacing: 0.75rem;
-		font-size: 6.25rem;
-		text-shadow: 0 0 5rem rgba($theme-black, 0.8);
+		svg {
+			fill: $theme-white;
+			width: 100vw;
+			filter: drop-shadow(0 0 10px $theme-black);
+			text {
+				@include font-light();
+				text-transform: uppercase;
+				letter-spacing: 0.75rem;
+			}
+		}
 	}
 
 	&.full {

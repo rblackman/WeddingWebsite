@@ -3,7 +3,15 @@ import '../../../scss/itinerary.scss';
 import Page from '../shared/page';
 
 const Itinerary: FC = () => (
-	<Page pageName="itinerary" heroType="partial" heroText="Itinerary">
+	<Page
+		pageName="itinerary"
+		heroType="partial"
+		heroText="Itinerary"
+		textX={140}
+		textY={65}
+		viewBoxX={500}
+		viewBoxY={100}
+	>
 		<h3>Saturday, November 23, 2019</h3>
 		<h4>Ceremony</h4>
 		<dl>

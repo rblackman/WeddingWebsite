@@ -7,7 +7,15 @@ const mrLink: string = 'https://www.myregistry.com/giftlist/r2b2wedding';
 const knotLink: string = 'https://www.myregistry.com/giftlist/r2b2wedding';
 
 const Registry: FC = () => (
-	<Page pageName="registry" heroType="partial" heroText="Registry">
+	<Page
+		pageName="registry"
+		heroType="partial"
+		heroText="Registry"
+		textX={150}
+		textY={65}
+		viewBoxX={500}
+		viewBoxY={100}
+	>
 		<p>
 			We have a gift registry available
 			at <a href={mrLink}>MyRegistry</a> and a cash registry

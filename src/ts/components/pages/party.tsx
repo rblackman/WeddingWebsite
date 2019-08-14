@@ -4,7 +4,15 @@ import Page from '../shared/page';
 import PartyMember from '../shared/partyMember';
 
 const Party: FC = () => (
-	<Page pageName="party" heroType="partial" heroText="Wedding Party">
+	<Page
+		pageName="party"
+		heroType="partial"
+		heroText="Wedding Party"
+		textX={85}
+		textY={65}
+		viewBoxX={500}
+		viewBoxY={100}
+	>
 		<div className="party-grid">
 			<div className="groom">
 				<PartyMember name="Ryan Blackman" relation="Groom" />

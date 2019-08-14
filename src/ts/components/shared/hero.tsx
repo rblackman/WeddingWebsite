@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import '../../../scss/hero.scss';
 import { Pages } from './page';
+import SvgText, { SvgTextProps } from './svgText';
 
 type HeroType = 'full' | 'partial';
 
@@ -11,8 +12,8 @@ export interface HeroProps {
 	heroImageHorizontalAlign?: 'left' | 'center' | 'right';
 }
 
-interface Props extends HeroProps {
-	children?: JSX.Element[] | JSX.Element | string;
+interface Props extends HeroProps, SvgTextProps {
+	children: JSX.Element[] | JSX.Element | string;
 }
 
 const Hero: FC<Props> = (props: Props) => (
@@ -23,7 +24,9 @@ const Hero: FC<Props> = (props: Props) => (
 		}}
 	>
 		<h2 className="hero-text">
-			{props.children}
+			<SvgText {...props}>
+				{props.children}
+			</SvgText>
 		</h2>
 	</div>
 );
