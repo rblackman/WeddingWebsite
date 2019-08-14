@@ -45,6 +45,9 @@
 		"react-router-dom": "^5.0.1"
 	},
 	"scripts": {
-		"start:dev": "webpack-dev-server --mode development --hot --color"
+		"build:dev": "cross-env NODE_ENV=development webpack --mode development --color",
+		"build:prod": "cross-env NODE_ENV=production webpack --mode production --color",
+		"start:dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --hot --color",
+		"start:prod": "cross-env NODE_ENV=production webpack-dev-server --mode production --color"
 	}
 }
