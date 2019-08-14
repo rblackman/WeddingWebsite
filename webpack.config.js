@@ -1,52 +1,66 @@
-const path = require("path");
+const path = require('path');
+const webpack = require('webpack');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
+const dev = process.env.NODE_ENV !== 'production';
+
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+	template: 'src/html/index.html',
+	filename: 'index.html',
+	inject: true,
+});
+
+const DefinePluginConfig = new webpack.DefinePlugin({
+	'process.env.NODE_ENV': JSON.stringify('production'),
+});
+
+const indexPath = path.join(__dirname, '/src/ts/index.tsx');
 
 module.exports = {
-	entry: {
-		hello: path.join(__dirname, '/ts/hello.tsx'),
+	devServer: {
+		contentBase: path.join(__dirname, 'docs'),
+		host: 'localhost',
+		port: '3000',
+		hot: true,
+		headers: {
+			'Access-Control-Allow-Origin': '*',
+		},
+		historyApiFallback: true,
 	},
-	output: {
-		path: path.resolve(__dirname, "js"),
-		filename: "[name].js",
-		sourceMapFilename: "[name].map",
-		library: "[name]",
-		libraryTarget: "var"
-	},
+	entry: dev ? ['react-hot-loader/patch', indexPath] : [indexPath],
 	module: {
 		rules: [
-			{ test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-			{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
 			{
-				test: /\.scss$/,
-				use: [
-					{
-						loader: "style-loader"
-					},
-					{
-						loader: "css-loader"
-					},
-					{
-						loader: "sass-loader"
-					}
-				]
+				test: /\.tsx?$/,
+				loader: 'babel-loader',
 			},
 			{
-				test: /\.(png|jp(e*)g|svg)$/,
-				use: [
-					{
-						loader: "url-loader",
-						options: {
-							limit: 10000, // Convert images < 8kb to base64 strings
-							name: "images/[hash]-[name].[ext]"
-						}
-					}
-				]
-			}
-		]
+				enforce: 'pre',
+				test: /\.js$/,
+				loader: 'source-map-loader',
+			},
+			{
+				test: /\.scss$/,
+				loader: 'style-loader!css-loader!sass-loader',
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				loader: 'url-loader',
+				options: {
+					limit: 10000,
+				},
+			},
+		],
 	},
 	resolve: {
-		extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".scss"]
+		extensions: ['.ts', '.tsx', '.js'],
 	},
-	devtool: "source-map",
-	context: __dirname,
-	target: "web"
+	output: {
+		filename: 'index.js',
+		path: path.join(__dirname, '/docs'),
+	},
+	mode: dev ? 'development' : 'production',
+	plugins: dev
+		? [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
+		: [HTMLWebpackPluginConfig, DefinePluginConfig],
 };

@@ -2,5 +2,10 @@
 	"files.exclude": {
 		"node_modules": true,
 		"build-output": true
-	}
+	},
+	"cSpell.words": [
+		"Allerton",
+		"debounced",
+		"mixins"
+	]
 }

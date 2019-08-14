@@ -1,0 +1,38 @@
+@import './include';
+
+.registry-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: min-content;
+	grid-gap: 2rem;
+	justify-items: center;
+	align-items: center;
+	margin-top: $container-top-pad / 2;
+
+	@media only screen and (max-width: 45rem) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 6rem;
+	}
+}
+
+.registry-display {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr min-content;
+	grid-gap: 2rem;
+	h3 {
+		margin: 0;
+	}
+	a.visit {
+		@include button(1.5rem, f0.5rem, 0.25rem);
+	}
+
+	.logo {
+		max-height: 4rem;
+		fill: lighten($theme-dark-green, 3%);
+		opacity: 0.5;
+		justify-self: center;
+	}
+}

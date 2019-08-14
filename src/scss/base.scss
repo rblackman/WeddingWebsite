@@ -1,0 +1,23 @@
+@import './include';
+@import './type';
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	outline-color: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	color: $theme-black;
+	background: $theme-white;
+	@include font-normal;
+	outline-color: $theme-gold;
+}
+
+html,
+body,
+main {
+	margin: 0;
+	padding: 0;
+}

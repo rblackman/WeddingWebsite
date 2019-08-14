@@ -1,0 +1,7 @@
+@import './include';
+
+.main-container {
+	padding: $container-top-pad $container-side-pad;
+	max-width: $container-max-width;
+	margin: 0 auto;
+}

@@ -1,0 +1,25 @@
+@import './include';
+
+.party-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 1rem;
+	@media only screen and (max-width: 45rem) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 8fr;
+		justify-items: center;
+		.party-member {
+			width: 14rem;
+		}
+	}
+}
+
+.party-member {
+	h5 {
+		margin-top: 0;
+		font-size: 1.125rem;
+		font-weight: 300;
+	}
+}

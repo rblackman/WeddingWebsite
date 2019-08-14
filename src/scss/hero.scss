@@ -1,0 +1,67 @@
+@import './include';
+
+@mixin bg-image($name) {
+	background-image: url('../image/#{$name}-1x.jpg');
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 801px) and (min-resolution: 1.5dppx) {
+		background-image: url('../image/#{$name}-2x.jpg');
+	}
+
+	@media only screen and (min-width: 801px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min-width: 801px) and (min-resolution: 3dppx) {
+		background-image: url('../image/#{$name}-3x.jpg');
+	}
+
+	@media only screen and (max-width: 800px) {
+		background-image: url('../image/#{$name}-mobile.jpg');
+	}
+}
+
+.hero {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	background-position: center center;
+	background-size: cover;
+	h2 {
+		svg {
+			fill: $theme-white;
+			width: 96vw;
+			max-width: $container-max-width;
+			margin: 0 auto;
+			filter: drop-shadow(0 0 10px $theme-black);
+			pointer-events: none;
+			text {
+				@include font-light();
+				text-transform: uppercase;
+				letter-spacing: 0.75rem;
+			}
+		}
+	}
+
+	&.full {
+		height: calc(100vh - #{$header-total-height});
+	}
+
+	&.partial {
+		height: calc(70vh - #{$header-total-height});
+	}
+
+	&.home {
+		@include bg-image(home);
+	}
+
+	&.registry {
+		@include bg-image(registry);
+	}
+
+	&.itinerary {
+		@include bg-image(itinerary);
+	}
+
+	&.lodging {
+		@include bg-image(lodging);
+	}
+
+	&.party {
+		@include bg-image(party);
+	}
+}
