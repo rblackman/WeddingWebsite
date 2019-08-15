@@ -4,7 +4,7 @@ import Page from '../shared/page';
 import RegistryDisplay from '../shared/registryDisplay';
 
 const mrLink: string = 'https://www.myregistry.com/giftlist/r2b2wedding';
-const knotLink: string = 'https://www.myregistry.com/giftlist/r2b2wedding';
+const knotLink: string = 'https://www.theknot.com/us/d26qkv/registry';
 
 const Registry: FC = () => (
 	<Page
