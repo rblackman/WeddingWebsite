@@ -4,14 +4,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const dev = process.env.NODE_ENV !== 'production';
 
-const HTMLIndexWebpackPluginConfig = new HTMLWebpackPlugin({
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	template: 'src/html/index.html',
 	filename: 'index.html',
-	inject: true,
-});
-const HTMLRegistryWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: 'src/html/registry.html',
-	filename: 'registry.html',
 	inject: true,
 });
 
@@ -20,7 +15,6 @@ const DefinePluginConfig = new webpack.DefinePlugin({
 });
 
 const indexPath = path.join(__dirname, '/src/ts/index.tsx');
-const registryPath = path.join(__dirname, '/src/ts/registry.tsx');
 
 module.exports = {
 	devServer: {
@@ -33,7 +27,7 @@ module.exports = {
 		},
 		historyApiFallback: true,
 	},
-	entry: dev ? ['react-hot-loader/patch', indexPath, registryPath] : [indexPath, registryPath],
+	entry: dev ? ['react-hot-loader/patch', indexPath] : [indexPath],
 	module: {
 		rules: [
 			{
@@ -62,11 +56,11 @@ module.exports = {
 		extensions: ['.ts', '.tsx', '.js'],
 	},
 	output: {
-		filename: '[name].js',
+		filename: 'index.js',
 		path: path.join(__dirname, '/docs'),
 	},
 	mode: dev ? 'development' : 'production',
 	plugins: dev
-		? [HTMLIndexWebpackPluginConfig, HTMLRegistryWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
-		: [HTMLIndexWebpackPluginConfig, HTMLRegistryWebpackPluginConfig, DefinePluginConfig],
+		? [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin()]
+		: [HTMLWebpackPluginConfig, DefinePluginConfig],
 };
