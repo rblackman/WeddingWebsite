@@ -25,6 +25,7 @@ const Party: FC = () => (
 				<PartyMember name="Jonathan Huff" relation="Friend" />
 				<PartyMember name="Miles Godfry" relation="Friend" />
 				<PartyMember name="Judah Stone" relation="Nephew" role="Ring Bearer" />
+				<PartyMember name="Asher Stone" relation="Nephew" role="Honorary Ring Bearer" />
 			</div>
 			<div className="bride">
 				<PartyMember name="Rachel Berry" relation="Bride" />
